@@ -20,6 +20,8 @@ set ruler
 
 let mapleader = ","
 
+au BufNewFile,BufRead *.pp set filetype=puppet
+
 "---------------------------------------------
 "  Load plugins
 "---------------------------------------------
@@ -39,6 +41,7 @@ Plugin 'airblade/vim-gitgutter.git'
 Plugin 'Shougo/neocomplete.vim.git'
 Plugin 'tpope/vim-fugitive.git'
 Plugin 'kwbdi.vim'
+Plugin 'puppetlabs/puppet-syntax-vim.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
