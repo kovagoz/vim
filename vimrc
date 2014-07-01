@@ -28,17 +28,17 @@ let mapleader = ","
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Bundle 'sjl/badwolf.git'
-Bundle 'kien/ctrlp.vim.git'
-Bundle 'scrooloose/nerdtree.git'
-Bundle 'Align'
-Bundle 'terryma/vim-multiple-cursors.git'
-Bundle 'airblade/vim-rooter.git'
-Bundle 'tomtom/tcomment_vim.git'
-Bundle 'airblade/vim-gitgutter.git'
-Bundle 'Shougo/neocomplete.vim.git'
-Bundle 'tpope/vim-fugitive.git'
-Bundle 'kwbdi.vim'
+Plugin 'sjl/badwolf.git'
+Plugin 'kien/ctrlp.vim.git'
+Plugin 'scrooloose/nerdtree.git'
+Plugin 'Align'
+Plugin 'terryma/vim-multiple-cursors.git'
+Plugin 'airblade/vim-rooter.git'
+Plugin 'tomtom/tcomment_vim.git'
+Plugin 'airblade/vim-gitgutter.git'
+Plugin 'Shougo/neocomplete.vim.git'
+Plugin 'tpope/vim-fugitive.git'
+Plugin 'kwbdi.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
