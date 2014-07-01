@@ -38,6 +38,7 @@ Bundle 'tomtom/tcomment_vim.git'
 Bundle 'airblade/vim-gitgutter.git'
 Bundle 'Shougo/neocomplete.vim.git'
 Bundle 'tpope/vim-fugitive.git'
+Bundle 'kwbdi.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -79,6 +80,7 @@ nnoremap <Leader>gb :Gblame<CR>
 nnoremap <leader>gs :Gstatus<CR><C-w>20+
 nnoremap <leader>gc :Gcommit<CR>
 nmap <leader>cc gcc
+map <Leader>x <Plug>Kwbd
 
 vnoremap aa :Align =><CR>
 vnoremap ae :Align =<CR>
