@@ -81,9 +81,9 @@ nnoremap <silent> <right> :bnext<CR>
 nnoremap <leader>p :set invpaste paste?<CR>
 nnoremap <leader>n :set nonumber!<CR>
 nnoremap <leader>v V`]
-nnoremap <Leader>gb :Gblame<CR>
-nnoremap <leader>gs :Gstatus<CR><C-w>20+
-nnoremap <leader>gc :Gcommit<CR>
+nnoremap gb :Gblame<CR>
+nnoremap gs :Gstatus<CR><C-w>20+
+nnoremap gc :Gcommit<CR>
 nmap <leader>cc gcc
 map <Leader>x <Plug>Kwbd
 
