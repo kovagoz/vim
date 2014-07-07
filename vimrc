@@ -17,6 +17,7 @@ set wildignore+=*/.git/*,*/vendor/*,*/node_modules/*,*/assets/*
 set listchars=tab:>-,trail:.,extends:>,precedes:<
 set list
 set ruler
+set undolevels=100
 
 let mapleader = ","
 
