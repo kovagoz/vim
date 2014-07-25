@@ -94,3 +94,13 @@ vnoremap ae :Align =<CR>
 vmap <leader>cc gc
 
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" Switch windows with Shift+Arrow keys
+map <Esc>[1;2A <S-Up>
+map <Esc>[1;2B <S-Down>
+map <Esc>[1;2C <S-Right>
+map <Esc>[1;2D <S-Left>
+map <S-Up> :lprev<CR>
+map <S-Down> :lnext<CR>
+map <S-Right> <C-W>w
+map <S-Left> <C-W>W
