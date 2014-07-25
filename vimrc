@@ -45,6 +45,7 @@ Plugin 'tpope/vim-fugitive.git'
 Plugin 'kwbdi.vim'
 Plugin 'puppetlabs/puppet-syntax-vim.git'
 Plugin 'xsbeats/vim-blade.git'
+Plugin 'extradite.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
