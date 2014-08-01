@@ -24,6 +24,14 @@ let mapleader = ","
 au BufNewFile,BufRead *.pp set filetype=puppet
 au BufNewFile,BufRead *.blade.php set filetype=blade
 
+hi SignColumn ctermbg=none
+hi LineNr ctermbg=none
+hi FoldColumn ctermbg=none
+hi GitGutterAdd ctermbg=none ctermfg=green
+hi GitGutterChange ctermbg=none ctermfg=yellow
+hi GitGutterDelete ctermbg=none ctermfg=red
+hi Pmenu ctermbg=black ctermfg=lightgray
+
 "---------------------------------------------
 "  Load plugins
 "---------------------------------------------
@@ -32,7 +40,6 @@ au BufNewFile,BufRead *.blade.php set filetype=blade
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'sjl/badwolf.git'
 Plugin 'kien/ctrlp.vim.git'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'Align'
@@ -54,8 +61,6 @@ filetype plugin indent on    " required
 "---------------------------------------------
 "  Plugin settings
 "---------------------------------------------
-
-silent! colorscheme badwolf
 
 let g:ctrlp_match_window = 'top,order:ttb,min:1,max:20'
 let g:ctrlp_map = '<c-f>'
