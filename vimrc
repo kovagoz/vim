@@ -111,3 +111,5 @@ map <S-Up> :lprev<CR>
 map <S-Down> :lnext<CR>
 map <S-Right> <C-W>w
 map <S-Left> <C-W>W
+
+let g:lightline = {'colorscheme': 'wombat'}
