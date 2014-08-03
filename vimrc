@@ -18,6 +18,7 @@ set listchars=tab:>-,trail:.,extends:>,precedes:<
 set list
 set ruler
 set undolevels=100
+set laststatus=2
 
 let mapleader = ","
 
@@ -53,6 +54,7 @@ Plugin 'kwbdi.vim'
 Plugin 'puppetlabs/puppet-syntax-vim.git'
 Plugin 'xsbeats/vim-blade.git'
 Plugin 'extradite.vim'
+Plugin 'itchyny/lightline.vim.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
