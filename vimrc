@@ -55,6 +55,7 @@ Plugin 'puppetlabs/puppet-syntax-vim.git'
 Plugin 'xsbeats/vim-blade.git'
 Plugin 'extradite.vim'
 Plugin 'itchyny/lightline.vim.git'
+Plugin 'localvimrc'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -73,6 +74,9 @@ let g:ctrlp_custom_ignore = {
 let g:neocomplete#enable_at_startup = 1
 
 let g:fugitive_git_executable = 'git -c color.status=false'
+
+let g:localvimrc_ask = 0
+let g:localvimrc_sandbox = 0
 
 "---------------------------------------------
 "  Key bindings
