@@ -57,6 +57,7 @@ Plugin 'xsbeats/vim-blade.git'
 Plugin 'extradite.vim'
 Plugin 'itchyny/lightline.vim.git'
 Plugin 'localvimrc'
+Plugin 'scrooloose/syntastic.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -78,6 +79,23 @@ let g:fugitive_git_executable = 'git -c color.status=false'
 
 let g:localvimrc_ask = 0
 let g:localvimrc_sandbox = 0
+
+let g:lightline = {
+    \ 'colorscheme': 'wombat',
+    \ 'active': {
+    \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ],
+    \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
+    \ },
+      \ 'component_function': {
+      \   'fugitive': 'MyFugitive',
+      \ },
+    \ 'component_expand': {
+    \   'syntastic': 'SyntasticStatuslineFlag',
+    \ },
+    \ 'component_type': {
+    \   'syntastic': 'error',
+    \ },
+    \ }
 
 "---------------------------------------------
 "  Key bindings
@@ -117,4 +135,17 @@ map <S-Down> :lnext<CR>
 map <S-Right> <C-W>w
 map <S-Left> <C-W>W
 
-let g:lightline = {'colorscheme': 'wombat'}
+"---------------------------------------------
+"  Functions
+"---------------------------------------------
+
+function! MyFugitive()
+  try
+    if expand('%:t') !~? 'Tagbar\|Gundo\|NERD' && &ft !~? 'vimfiler' && exists('*fugitive#head')
+      let _ = fugitive#head()
+      return strlen(_) ? '('._.')' : ''
+    endif
+  catch
+  endtry
+  return ''
+endfunction
