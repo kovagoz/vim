@@ -32,6 +32,7 @@ hi GitGutterAdd ctermbg=none ctermfg=green
 hi GitGutterChange ctermbg=none ctermfg=yellow
 hi GitGutterDelete ctermbg=none ctermfg=red
 hi Pmenu ctermbg=black ctermfg=lightgray
+hi Search ctermfg=black
 
 "---------------------------------------------
 "  Load plugins
