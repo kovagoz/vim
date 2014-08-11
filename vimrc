@@ -59,6 +59,7 @@ Plugin 'extradite.vim'
 Plugin 'itchyny/lightline.vim.git'
 Plugin 'localvimrc'
 Plugin 'scrooloose/syntastic.git'
+Plugin 'rayburgemeestre/phpfolding.vim.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
