@@ -104,6 +104,7 @@ let g:lightline = {
 
 nnoremap <c-b> :CtrlPBuffer<CR>
 nnoremap <c-t> :CtrlPBufTag<CR>
+nnoremap <c-m> :CtrlPMRUFiles<CR>
 nnoremap <c-o> :NERDTreeToggle<CR>
 nnoremap <silent> <leader>x :bw<CR>
 nnoremap <space> /
