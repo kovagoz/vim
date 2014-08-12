@@ -100,6 +100,8 @@ let g:lightline = {
     \ },
     \ }
 
+let g:DisableAutoPHPFolding = 1
+
 "---------------------------------------------
 "  Key bindings
 "---------------------------------------------
@@ -138,6 +140,8 @@ map <S-Up> :lprev<CR>
 map <S-Down> :lnext<CR>
 map <S-Right> <C-W>w
 map <S-Left> <C-W>W
+
+nnoremap zf :EnablePHPFolds<CR>zz
 
 "---------------------------------------------
 "  Functions
