@@ -1,8 +1,6 @@
 set nocompatible             " be iMproved, required
 filetype off                 " required
 
-syntax on
-
 set t_Co=256
 set expandtab
 set tabstop=4
@@ -21,19 +19,6 @@ set undolevels=100
 set laststatus=2
 
 let mapleader = ","
-
-au BufNewFile,BufRead *.pp set filetype=puppet
-au BufNewFile,BufRead *.blade.php set filetype=blade
-
-hi SignColumn ctermbg=none
-hi LineNr ctermbg=none
-hi FoldColumn ctermbg=none
-hi GitGutterAdd ctermbg=none ctermfg=green
-hi GitGutterChange ctermbg=none ctermfg=yellow
-hi GitGutterDelete ctermbg=none ctermfg=red
-hi Pmenu ctermbg=black ctermfg=lightgray
-hi Search ctermfg=black
-hi Visual ctermfg=black
 
 "---------------------------------------------
 "  Load plugins
@@ -65,6 +50,21 @@ Plugin 'SirVer/ultisnips.git'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+syntax on
+
+au BufNewFile,BufRead *.pp set filetype=puppet
+au BufNewFile,BufRead *.blade.php set filetype=blade
+
+hi SignColumn ctermbg=none
+hi LineNr ctermbg=none
+hi FoldColumn ctermbg=none
+hi GitGutterAdd ctermbg=none ctermfg=green
+hi GitGutterChange ctermbg=none ctermfg=yellow
+hi GitGutterDelete ctermbg=none ctermfg=red
+hi Pmenu ctermbg=black ctermfg=lightgray
+hi Search ctermfg=black
+hi Visual ctermfg=black
 
 "---------------------------------------------
 "  Plugin settings
@@ -99,6 +99,12 @@ let g:lightline = {
     \   'syntastic': 'error',
     \ },
     \ }
+
+let g:DisableAutoPHPFolding = 1
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 "---------------------------------------------
 "  Key bindings
@@ -138,6 +144,8 @@ map <S-Up> :lprev<CR>
 map <S-Down> :lnext<CR>
 map <S-Right> <C-W>w
 map <S-Left> <C-W>W
+
+nnoremap zf :EnablePHPFolds<CR>zz
 
 "---------------------------------------------
 "  Functions
