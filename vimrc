@@ -45,7 +45,9 @@ Plugin 'itchyny/lightline.vim.git'
 Plugin 'localvimrc'
 Plugin 'scrooloose/syntastic.git'
 Plugin 'rayburgemeestre/phpfolding.vim.git'
-Plugin 'SirVer/ultisnips.git'
+"Plugin 'SirVer/ultisnips.git'
+Plugin 'honza/vim-snippets.git'
+Plugin 'joonty/vdebug.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -106,6 +108,15 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
+let g:vdebug_options= {
+\    "port" : 9025,
+\    "server" : '',
+\    "timeout" : 20,
+\    "break_on_open" : 0,
+\    "ide_key" : 'vagrant',
+\    "path_maps": {"/vagrant/www": "/home/kovi/Development/jeti-vm/www"}
+\}
+
 "---------------------------------------------
 "  Key bindings
 "---------------------------------------------
@@ -124,9 +135,9 @@ nnoremap <leader>p :set invpaste paste?<CR>
 nnoremap <leader>n :set nonumber!<CR>
 nnoremap <leader>v V`]
 nnoremap gb :Gblame<CR>
-nnoremap gs :Gstatus<CR><C-w>20+
+nnoremap <silent> gs :call TigStatus()<CR>
 nnoremap gc :Gcommit<CR>
-nmap <leader>cc gcc
+"nmap <leader>cc gcc
 map <Leader>x <Plug>Kwbd
 
 vnoremap aa :Align =><CR>
@@ -147,6 +158,19 @@ map <S-Left> <C-W>W
 
 nnoremap zf :EnablePHPFolds<CR>zz
 
+map <Leader>1 <F1>
+map <Leader>2 <F2>
+map <Leader>3 <F3>
+map <Leader>4 <F4>
+map <Leader>5 <F5>
+map <Leader>6 <F6>
+map <Leader>7 <F7>
+map <Leader>8 <F8>
+map <Leader>9 <F9>
+map <Leader>10 <F10>
+map <Leader>11 <F11>
+map <Leader>12 <F12>
+
 "---------------------------------------------
 "  Functions
 "---------------------------------------------
@@ -160,4 +184,22 @@ function! MyFugitive()
   catch
   endtry
   return ''
+endfunction
+
+function! Multiple_cursors_before()
+    exe 'NeoCompleteLock'
+endfunction
+
+function! Multiple_cursors_after()
+    exe 'NeoCompleteUnlock'
+endfunction
+
+function! TigStatus()
+    silent !tig status
+    redraw!
+endfunction
+
+function! TigShow()
+    silent !tig show HEAD -- file
+    redraw!
 endfunction
