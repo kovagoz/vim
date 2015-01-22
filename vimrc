@@ -29,6 +29,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'kien/ctrlp.vim.git'
+Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'Align'
 Plugin 'terryma/vim-multiple-cursors.git'
@@ -57,6 +58,7 @@ syntax on
 
 au BufNewFile,BufRead *.pp set filetype=puppet
 au BufNewFile,BufRead *.blade.php set filetype=blade
+"au BufRead *.php :EnableFastPHPFolds
 
 hi SignColumn ctermbg=none
 hi LineNr ctermbg=none
@@ -67,6 +69,7 @@ hi GitGutterDelete ctermbg=none ctermfg=red
 hi Pmenu ctermbg=black ctermfg=lightgray
 hi Search ctermfg=black
 hi Visual ctermfg=black
+hi Folded ctermfg=Black ctermbg=DarkGray
 
 "---------------------------------------------
 "  Plugin settings
@@ -117,12 +120,14 @@ let g:vdebug_options= {
 \    "path_maps": {"/vagrant/www": "/home/kovi/Development/jeti-vm/www"}
 \}
 
+let g:NERDTreeWinSize=40
+
 "---------------------------------------------
 "  Key bindings
 "---------------------------------------------
 
 nnoremap <c-b> :CtrlPBuffer<CR>
-nnoremap <c-t> :CtrlPBufTag<CR>
+nnoremap <c-t> :CtrlPFunky<CR>
 nnoremap <c-m> :CtrlPMRUFiles<CR>
 nnoremap <c-o> :NERDTreeToggle<CR>
 nnoremap <silent> <leader>x :bw<CR>
