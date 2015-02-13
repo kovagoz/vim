@@ -11,7 +11,7 @@ set incsearch
 set ignorecase
 set backspace=start,indent,eol
 set noswapfile
-set wildignore+=*/.git/*,*/vendor/*,*/node_modules/*,*/assets/*
+set wildignore+=*/.git/*,*/node_modules/*,*/assets/*
 set listchars=tab:>-,trail:.,extends:>,precedes:<
 set list
 set ruler
@@ -78,7 +78,7 @@ hi Folded ctermfg=Black ctermbg=DarkGray
 let g:ctrlp_match_window = 'top,order:ttb,min:1,max:20'
 let g:ctrlp_map = '<c-f>'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'dir':  '(vendor|\.(git|hg|svn))$',
   \ }
 
 let g:neocomplete#enable_at_startup = 1
