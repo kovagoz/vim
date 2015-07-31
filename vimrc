@@ -47,6 +47,7 @@ Plugin 'scrooloose/syntastic.git'
 Plugin 'rayburgemeestre/phpfolding.vim.git'
 Plugin 'honza/vim-snippets.git'
 Plugin 'joonty/vdebug.git'
+Plugin 'daylerees/colour-schemes', {'rtp': 'vim/'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -54,20 +55,32 @@ filetype plugin indent on    " required
 
 syntax on
 
-au BufNewFile,BufRead *.pp set filetype=puppet
-au BufNewFile,BufRead *.blade.php set filetype=blade
-"au BufRead *.php :EnableFastPHPFolds
+if has('gui_running')
+    colorscheme laravel
+    set guifont=Osaka-Mono:h17
+    set linespace=4
+    set guioptions-=r
+    set guioptions-=L
+    hi clear Directory
+    hi clear VertSplit
+    hi link Directory StorageClass
+    hi link VertSplit Comment
+endif
 
-hi SignColumn ctermbg=none
+hi SignColumn ctermbg=none guibg=bg
 hi LineNr ctermbg=none
 hi FoldColumn ctermbg=none
-hi GitGutterAdd ctermbg=none ctermfg=green
-hi GitGutterChange ctermbg=none ctermfg=yellow
-hi GitGutterDelete ctermbg=none ctermfg=red
-hi Pmenu ctermbg=black ctermfg=lightgray
+hi GitGutterAdd ctermbg=none ctermfg=green guifg=green
+hi GitGutterChange ctermbg=none ctermfg=yellow guifg=yellow
+hi GitGutterChangeDelete ctermbg=none ctermfg=yellow guifg=yellow
+hi GitGutterDelete ctermbg=none ctermfg=red guifg=red
+hi Pmenu ctermbg=black ctermfg=lightgray guibg=Black guifg=LightGray
 hi Search ctermfg=black
 hi Visual ctermfg=black
-hi Folded ctermfg=Black ctermbg=DarkGray
+hi Folded ctermfg=Black ctermbg=DarkGray guifg=Black
+
+au BufNewFile,BufRead *.pp set filetype=puppet
+au BufNewFile,BufRead *.blade.php set filetype=blade
 
 "---------------------------------------------
 "  Plugin settings
