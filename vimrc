@@ -188,6 +188,8 @@ map <Leader>10 <F10>
 map <Leader>11 <F11>
 map <Leader>12 <F12>
 
+nnoremap <Leader>b :call Codebug()<CR>
+
 "---------------------------------------------
 "  Functions
 "---------------------------------------------
@@ -220,3 +222,9 @@ function! TigShow()
     silent !tig show HEAD -- file
     redraw!
 endfunction
+
+fun! Codebug()
+    let current_file = expand('%:p')
+    let current_line = line(".")
+    exec 'silent !open "codebug://send?file=' . current_file . '&line=' . current_line . '&op=add&open=0"'
+endfun
