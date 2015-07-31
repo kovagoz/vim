@@ -48,6 +48,7 @@ Plugin 'rayburgemeestre/phpfolding.vim.git'
 Plugin 'honza/vim-snippets.git'
 Plugin 'joonty/vdebug.git'
 Plugin 'daylerees/colour-schemes', {'rtp': 'vim/'}
+Plugin 'chase/vim-ansible-yaml'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
