@@ -138,9 +138,9 @@ let g:NERDTreeWinSize=40
 "  Key bindings
 "---------------------------------------------
 
-nnoremap <c-b> :CtrlPBuffer<CR>
+nnoremap <c-m> :CtrlPBuffer<CR>
 nnoremap <c-t> :CtrlPFunky<CR>
-nnoremap <c-m> :CtrlPMRUFiles<CR>
+nnoremap <c-h> :CtrlPMRUFiles<CR>
 nnoremap <c-o> :NERDTreeToggle<CR>
 nnoremap <silent> <leader>x :bw<CR>
 nnoremap <space> /
