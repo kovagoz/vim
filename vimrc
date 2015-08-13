@@ -57,7 +57,7 @@ filetype plugin indent on    " required
 syntax on
 
 if has('gui_running')
-    colorscheme laravel
+    colorscheme peacock
     set guifont=Osaka-Mono:h17
     set linespace=4
     set guioptions-=r
