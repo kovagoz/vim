@@ -82,6 +82,7 @@ hi Folded ctermfg=Black ctermbg=DarkGray guifg=Black
 
 au BufNewFile,BufRead *.pp set filetype=puppet
 au BufNewFile,BufRead *.blade.php set filetype=blade
+au BufNewFile,BufRead *.conf set filetype=conf
 
 "---------------------------------------------
 "  Plugin settings
