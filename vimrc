@@ -133,7 +133,10 @@ let g:vdebug_options= {
 \    "path_maps": {"/vagrant/www": "/home/kovi/Development/jeti-vm/www"}
 \}
 
-let g:NERDTreeWinSize=40
+let g:NERDTreeWinSize = 40
+let g:NERDTreeShowBookmarks = 1
+let g:NERDTreeBookmarksSort = 1
+let g:NERDTreeChDirMode = 2
 
 "---------------------------------------------
 "  Key bindings
