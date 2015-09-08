@@ -138,6 +138,8 @@ let g:NERDTreeShowBookmarks = 1
 let g:NERDTreeBookmarksSort = 1
 let g:NERDTreeChDirMode = 2
 
+let g:syntastic_php_php_exec = '/usr/local/php5/bin/php'
+
 "---------------------------------------------
 "  Key bindings
 "---------------------------------------------
