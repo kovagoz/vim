@@ -50,6 +50,7 @@ Plugin 'joonty/vdebug.git'
 Plugin 'daylerees/colour-schemes', {'rtp': 'vim/'}
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'smerrill/vcl-vim-plugin'
+Plugin 'tommcdo/vim-exchange'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
