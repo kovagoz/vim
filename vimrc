@@ -51,6 +51,8 @@ Plugin 'daylerees/colour-schemes', {'rtp': 'vim/'}
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'smerrill/vcl-vim-plugin'
 Plugin 'tommcdo/vim-exchange'
+" Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plugin 'NLKNguyen/papercolor-theme'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -59,9 +61,10 @@ filetype plugin indent on    " required
 syntax on
 
 if has('gui_running')
-    colorscheme peacock
-    set guifont=Osaka-Mono:h17
-    set linespace=4
+    set background=light
+    colorscheme PaperColor
+    set guifont=Osaka-Mono:h15
+    set linespace=6
     set guioptions-=r
     set guioptions-=L
     hi clear Directory
@@ -73,10 +76,10 @@ endif
 hi SignColumn ctermbg=none guibg=bg
 hi LineNr ctermbg=none
 hi FoldColumn ctermbg=none
-hi GitGutterAdd ctermbg=none ctermfg=green guifg=green
-hi GitGutterChange ctermbg=none ctermfg=yellow guifg=yellow
-hi GitGutterChangeDelete ctermbg=none ctermfg=yellow guifg=yellow
-hi GitGutterDelete ctermbg=none ctermfg=red guifg=red
+" hi GitGutterAdd ctermbg=none ctermfg=green guifg=green
+" hi GitGutterChange ctermbg=none ctermfg=yellow guifg=yellow
+" hi GitGutterChangeDelete ctermbg=none ctermfg=yellow guifg=yellow
+" hi GitGutterDelete ctermbg=none ctermfg=red guifg=red
 hi Pmenu ctermbg=black ctermfg=lightgray guibg=Black guifg=LightGray
 hi Search ctermfg=black
 hi Visual ctermfg=black
@@ -104,7 +107,7 @@ let g:localvimrc_ask = 0
 let g:localvimrc_sandbox = 0
 
 let g:lightline = {
-    \ 'colorscheme': 'wombat',
+    \ 'colorscheme': 'PaperColor',
     \ 'active': {
     \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ],
     \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
