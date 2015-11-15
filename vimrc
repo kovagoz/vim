@@ -45,7 +45,7 @@ Plugin 'itchyny/lightline.vim.git'
 Plugin 'localvimrc'
 Plugin 'scrooloose/syntastic.git'
 Plugin 'rayburgemeestre/phpfolding.vim.git'
-Plugin 'honza/vim-snippets.git'
+Plugin 'SirVer/ultisnips'
 Plugin 'joonty/vdebug.git'
 Plugin 'daylerees/colour-schemes', {'rtp': 'vim/'}
 Plugin 'chase/vim-ansible-yaml'
@@ -53,6 +53,8 @@ Plugin 'smerrill/vcl-vim-plugin'
 Plugin 'tommcdo/vim-exchange'
 " Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'tobyS/vmustache' " Required by pdv
+Plugin 'tobyS/pdv'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -92,6 +94,8 @@ au BufNewFile,BufRead *.conf set filetype=conf
 "---------------------------------------------
 "  Plugin settings
 "---------------------------------------------
+
+let g:pdv_template_dir = $HOME . "/.vim/doc_snips"
 
 let g:ctrlp_match_window = 'top,order:ttb,min:1,max:20'
 let g:ctrlp_map = '<c-f>'
@@ -149,6 +153,7 @@ let g:syntastic_php_php_exec = '/usr/local/php5/bin/php'
 "  Key bindings
 "---------------------------------------------
 
+nnoremap <buffer> <C-p> :call pdv#DocumentWithSnip()<CR>
 nnoremap <c-m> :CtrlPBuffer<CR>
 nnoremap <c-t> :CtrlPFunky<CR>
 nnoremap <c-h> :CtrlPMRUFiles<CR>
