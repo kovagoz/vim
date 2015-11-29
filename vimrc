@@ -24,42 +24,39 @@ let mapleader = ","
 "  Load plugins
 "---------------------------------------------
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'kien/ctrlp.vim.git'
-Plugin 'tacahiroy/ctrlp-funky'
-Plugin 'scrooloose/nerdtree.git'
-Plugin 'Align'
-Plugin 'terryma/vim-multiple-cursors.git'
-Plugin 'tomtom/tcomment_vim.git'
-Plugin 'airblade/vim-gitgutter.git'
-Plugin 'Shougo/neocomplete.vim.git'
-Plugin 'tpope/vim-fugitive.git'
-Plugin 'kwbdi.vim'
-Plugin 'puppetlabs/puppet-syntax-vim.git'
-Plugin 'xsbeats/vim-blade.git'
-Plugin 'extradite.vim'
-Plugin 'itchyny/lightline.vim.git'
-Plugin 'localvimrc'
-Plugin 'scrooloose/syntastic.git'
-Plugin 'rayburgemeestre/phpfolding.vim.git'
-Plugin 'SirVer/ultisnips'
-Plugin 'joonty/vdebug.git'
-Plugin 'daylerees/colour-schemes', {'rtp': 'vim/'}
-Plugin 'chase/vim-ansible-yaml'
-Plugin 'smerrill/vcl-vim-plugin'
-Plugin 'tommcdo/vim-exchange'
+Plug 'kien/ctrlp.vim'
+Plug 'tacahiroy/ctrlp-funky'
+Plug 'scrooloose/nerdtree'
+Plug 'Align'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tomtom/tcomment_vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'Shougo/neocomplete.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'kwbdi.vim'
+"Plugin 'puppetlabs/puppet-syntax-vim'
+Plug 'xsbeats/vim-blade'
+Plug 'extradite.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'localvimrc'
+Plug 'scrooloose/syntastic'
+Plug 'rayburgemeestre/phpfolding.vim'
+Plug 'SirVer/ultisnips'
+Plug 'joonty/vdebug'
+Plug 'daylerees/colour-schemes', {'rtp': 'vim/'}
+Plug 'chase/vim-ansible-yaml'
+Plug 'smerrill/vcl-vim-plugin'
+Plug 'tommcdo/vim-exchange'
 " Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
-Plugin 'NLKNguyen/papercolor-theme'
-Plugin 'tobyS/vmustache' " Required by pdv
-Plugin 'tobyS/pdv'
-Plugin 'adoy/vim-php-refactoring-toolbox'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'tobyS/vmustache' " Required by pdv
+Plug 'tobyS/pdv'
+Plug 'adoy/vim-php-refactoring-toolbox'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call plug#end()
+"filetype plugin indent on    " required
 
 syntax on
 
