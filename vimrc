@@ -55,6 +55,7 @@ Plugin 'tommcdo/vim-exchange'
 Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'tobyS/vmustache' " Required by pdv
 Plugin 'tobyS/pdv'
+Plugin 'adoy/vim-php-refactoring-toolbox'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -94,6 +95,10 @@ au BufNewFile,BufRead *.conf set filetype=conf
 "---------------------------------------------
 "  Plugin settings
 "---------------------------------------------
+
+let g:vim_php_refactoring_auto_validate_visibility = 1
+let g:vim_php_refactoring_default_property_visibility = 'protected'
+let g:vim_php_refactoring_default_method_visibility = 'protected'
 
 let g:pdv_template_dir = $HOME . "/.vim/doc_snips"
 
