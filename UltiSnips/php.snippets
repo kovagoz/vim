@@ -1,4 +1,4 @@
-snippet class "Class declaration"
+snippet class "Class declaration" b
 <?php
 
 namespace $1;
@@ -9,21 +9,21 @@ class ${2:ClassName}${3: extends ${4:ParentClass}}${5: implements ${6:Interface}
 }
 endsnippet
 
-snippet pub "Public function"
+snippet pub "Public function" b
 public function ${1:name}(${2:$param})
 {
 	${0:return null;}
 }
 endsnippet
 
-snippet prot "Protected function"
+snippet prot "Protected function" b
 public function ${1:name}(${2:$param})
 {
 	${0:return null;}
 }
 endsnippet
 
-snippet cons "Constructor"
+snippet cons "Constructor" b
 public function __construct(${1:$param})
 {
 	${0:return null;}
@@ -34,8 +34,26 @@ snippet this "$this->"
 $this->$0
 endsnippet
 
-snippet if "If statement"
+snippet if "If statement" b
 if (${1:/* condition */}) {
 	${0:// code...}
+}
+endsnippet
+
+snippet for "For loop" b
+for (${1:$i = 0}; ${2:$i < ${3:$n}}; ${4:$i++}) {
+	${0:// Code here...}
+}
+endsnippet
+
+snippet php "PHP open tag" b
+<?php
+
+${0}
+endsnippet
+
+snippet foreach "Foreach loop" b
+foreach (${1:$var} as ${2:${3:$key} => ${4:$value}}) {
+	${0}
 }
 endsnippet

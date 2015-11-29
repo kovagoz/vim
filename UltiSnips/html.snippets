@@ -1,0 +1,45 @@
+snippet html "HTML 5 template" b
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>${1}</title>
+</head>
+<body>
+
+${0}
+
+</body>
+</html>
+endsnippet
+
+snippet jq "jQuery link" b
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+endsnippet
+
+snippet vue "Vue.js" b
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.10/vue.min.js"></script>
+endsnippet
+
+snippet echo "PHP echo" i
+<?= ${1} ?>${0}
+endsnippet
+
+snippet link "External resource" b
+<link ref="${1:stylesheet}" href="${2}">
+endsnippet
+
+snippet ajax "AJAX request" b
+var request = new XMLHttpRequest();
+request.timeout = ${1:5000};
+${3:
+request.onload = function () {
+	var response = request.responseText,
+		status = request.status;
+
+	${2:// Response callback here}
+};
+}
+request.open('${4:POST}', '${5:http://${6}}', true);
+request.send(${7:// Request data});
+endsnippet
