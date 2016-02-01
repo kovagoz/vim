@@ -9,6 +9,7 @@ set shiftwidth=4
 set encoding=utf8
 set incsearch
 set ignorecase
+set smartcase
 set backspace=start,indent,eol
 set noswapfile
 set wildignore+=*/.git/*,*/node_modules/*,*/assets/*
