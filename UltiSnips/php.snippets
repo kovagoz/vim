@@ -9,6 +9,28 @@ class ${2:ClassName}${3: extends ${4:ParentClass}}${5: implements ${6:Interface}
 }
 endsnippet
 
+snippet inter "Interface declaration" b
+<?php
+
+namespace $1;
+
+interface ${2:InterfaceName}${3: extends ${4:Foo, Bar}}
+{
+	$0
+}
+endsnippet
+
+snippet trait "Trait declaration" b
+<?php
+
+namespace $1;
+
+trait ${2:TraitName}
+{
+	$0
+}
+endsnippet
+
 snippet pub "Public function" b
 public function ${1:name}(${2:$param})
 {
@@ -62,5 +84,50 @@ endsnippet
 snippet foreach "Foreach loop" b
 foreach (${1:$var} as ${2:${3:$key} => ${4:$value}}) {
 	${0}
+}
+endsnippet
+
+snippet service "Laravel service provider" b
+<?php
+
+namespace App\Providers;
+
+use Illuminate\Support\ServiceProvider;
+
+class ${1:ClassName} extends ServiceProvider
+{
+	/**
+	 * Register services.
+	 *
+	 * @return void
+	 */
+	public function register()
+	{
+		${0:// Code here...}
+	}
+}
+endsnippet
+
+snippet bind "Bind service into container" b
+$this->app->bind(${1:ClassName}, ${2:function ($app) {
+	${0:// Code here...}
+}});
+endsnippet
+
+snippet test "PHPUnit test case" b
+<?php
+
+namespace Tests\Unit${1:\SubNamespace};
+
+use Mockery as m;
+
+class ${2:Class}Test extends \PHPUnit_Framework_TestCase
+{
+	public function tearDown()
+	{
+		m::close();
+	}
+
+	${0:// First test here...}
 }
 endsnippet
