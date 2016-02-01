@@ -65,8 +65,9 @@ if has('gui_running')
     colorscheme PaperColor
     set guifont=Osaka-Mono:h15
     set linespace=6
-    set guioptions-=r
-    set guioptions-=L
+    set guioptions-=r " disable right-hand scrollbar
+    set guioptions-=L " disable left-hand scrollbar
+    set guioptions+=c " console prompts instead of dialogs
     hi clear Directory
     hi clear VertSplit
     hi link Directory StorageClass
