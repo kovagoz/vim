@@ -95,6 +95,10 @@ au BufNewFile,BufRead *.conf set filetype=conf
 "  Plugin settings
 "---------------------------------------------
 
+let Tlist_Show_One_File = 1
+let Tlist_Sort_Type = "name"
+
+let g:vim_php_refactoring_use_default_mapping = 0
 let g:vim_php_refactoring_auto_validate_visibility = 1
 let g:vim_php_refactoring_default_property_visibility = 'protected'
 let g:vim_php_refactoring_default_method_visibility = 'protected'
@@ -156,6 +160,17 @@ let g:syntastic_php_php_exec = '/usr/local/php5/bin/php'
 "---------------------------------------------
 "  Key bindings
 "---------------------------------------------
+
+nnoremap <Leader>rlv :call PhpRenameLocalVariable()<CR>
+nnoremap <Leader>rcv :call PhpRenameClassVariable()<CR>
+nnoremap <Leader>eu :call PhpExtractUse()<CR>
+nnoremap <Leader>rm :call PhpRenameMethod()<CR>
+vnoremap <Leader>ec :call PhpExtractConst()<CR>
+nnoremap <Leader>ep :call PhpExtractClassProperty()<CR>
+vnoremap <Leader>em :call PhpExtractMethod()<CR>
+nnoremap <Leader>np :call PhpCreateProperty()<CR>
+nnoremap <Leader>du :call PhpDetectUnusedUseStatements()<CR>
+nnoremap <Leader>sg :call PhpCreateSettersAndGetters()<CR>
 
 nnoremap <buffer> <C-p> :call pdv#DocumentWithSnip()<CR>
 nnoremap <c-m> :CtrlPBuffer<CR>
