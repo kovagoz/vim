@@ -28,7 +28,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'kien/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'Align'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tomtom/tcomment_vim'
@@ -37,23 +37,23 @@ Plug 'Shougo/neocomplete.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'kwbdi.vim'
 "Plugin 'puppetlabs/puppet-syntax-vim'
-Plug 'xsbeats/vim-blade'
+Plug 'xsbeats/vim-blade', {'for': 'blade'}
 Plug 'extradite.vim'
 Plug 'itchyny/lightline.vim'
-Plug 'localvimrc'
+"Plug 'localvimrc'
 Plug 'scrooloose/syntastic'
-Plug 'rayburgemeestre/phpfolding.vim'
+Plug 'rayburgemeestre/phpfolding.vim', {'for': 'php'}
 Plug 'SirVer/ultisnips'
-Plug 'joonty/vdebug'
+"Plug 'joonty/vdebug'
 Plug 'daylerees/colour-schemes', {'rtp': 'vim/'}
-Plug 'chase/vim-ansible-yaml'
-Plug 'smerrill/vcl-vim-plugin'
+Plug 'chase/vim-ansible-yaml', {'for': 'ansible'}
+Plug 'smerrill/vcl-vim-plugin', {'for': 'vcl'}
 Plug 'tommcdo/vim-exchange'
 " Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'tobyS/vmustache' " Required by pdv
-Plug 'tobyS/pdv'
-Plug 'adoy/vim-php-refactoring-toolbox'
+Plug 'tobyS/pdv', {'for': 'php'}
+Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
 
 call plug#end()
 "filetype plugin indent on    " required
