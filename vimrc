@@ -178,7 +178,7 @@ nnoremap <Leader>np :call PhpCreateProperty()<CR>
 nnoremap <Leader>du :call PhpDetectUnusedUseStatements()<CR>
 nnoremap <Leader>sg :call PhpCreateSettersAndGetters()<CR>
 
-nnoremap <buffer> <C-p> :call pdv#DocumentWithSnip()<CR>
+nnoremap <c-p> :call pdv#DocumentWithSnip()<CR>
 nnoremap <c-m> :CtrlPBuffer<CR>
 nnoremap <c-t> :CtrlPFunky<CR>
 nnoremap <c-h> :CtrlPMRUFiles<CR>
