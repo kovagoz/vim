@@ -91,6 +91,12 @@ au BufNewFile,BufRead *.pp set filetype=puppet
 au BufNewFile,BufRead *.blade.php set filetype=blade
 au BufNewFile,BufRead *.conf set filetype=conf
 
+" If you prefer the Omni-Completion tip window to close when a selection is
+" made, these lines close it on movement in insert mode or when leaving
+" insert mode
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
 "---------------------------------------------
 "  Plugin settings
 "---------------------------------------------
@@ -137,9 +143,9 @@ let g:lightline = {
 
 let g:DisableAutoPHPFolding = 1
 
-let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="<s-tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+"let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 let g:vdebug_options= {
 \    "port" : 9025,
@@ -241,11 +247,11 @@ function! MyFugitive()
 endfunction
 
 function! Multiple_cursors_before()
-    exe 'NeoCompleteLock'
+   exe 'NeoCompleteLock'
 endfunction
 
 function! Multiple_cursors_after()
-    exe 'NeoCompleteUnlock'
+   exe 'NeoCompleteUnlock'
 endfunction
 
 function! TigStatus()
